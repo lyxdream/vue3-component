@@ -1,0 +1,21 @@
+{
+  "name": "vue3-component",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"pnpm -C play dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "@zi-yxui/components": "workspace:*",
+    "@zi-yxui/theme-chalk": "workspace:*",
+    "@zi-yxui/utils": "workspace:*"
+  }
+}
