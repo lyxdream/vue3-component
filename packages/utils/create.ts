@@ -39,7 +39,7 @@ function createBEM(prefixName: string) {
   element && modifier ? _bem(prefixName, '', element, modifier) : "";
   const bem = (blockSuffix: string = "", element: string = "",modifier: string = "") =>
     blockSuffix && element&&modifier ? _bem(prefixName, blockSuffix, element, modifier) : "";
-  const is = (name, state) => (state ? `is-${name}` : '')
+  const is = (name:string, state:string | boolean) => (state ? `is-${name}` : '')
   return {
     b,
     e,
@@ -57,13 +57,13 @@ export function createNamespace(name: string) {
 }
 
 /** 
-const bem = createNamespace("icon");
-console.log(bem.b("box"));
-console.log(bem.e("element"));
-console.log(bem.m("modifier"));
-console.log(bem.be("box","element"));
-console.log(bem.bm("box","modifier"));
-console.log(bem.em("element","modifier"));
-console.log(bem.bem("box","element","modifier"));
-console.log(bem.is("checked",true));
+const bem = createNamespace("icon"); z-icon
+console.log(bem.b("box"));   z-icon-box
+console.log(bem.e("element"));  z-icon__element
+console.log(bem.m("modifier"));  z-icon--modifier
+console.log(bem.be("box","element")); z-icon-box__element
+console.log(bem.bm("box","modifier")); z-icon-box--modifier
+console.log(bem.em("element","modifier")); z-icon__element--modifier
+console.log(bem.bem("box","element","modifier")); z-icon-box__element--modifier
+console.log(bem.is("checked",true)); is-checked
 */
